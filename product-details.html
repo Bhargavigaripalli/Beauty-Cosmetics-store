@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Stackly Beauty</title>
+  <meta name="description" content="Explore ingredient lists, suitability, usage guides, and beauty expert advice for this premium cosmetic product.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/product-details.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo" aria-label="Stackly Home">
+        <img class="logo-img" src="images/stackly-logo.webp" alt="Stackly Logo">
+      </a>
+      <button class="hamburger" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm btn-shimmer">Login</a>
+        <a href="create-account.html" class="btn btn-secondary btn-sm btn-shimmer">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Details Hero Header Placeholder -->
+  <div style="background-color: var(--primary); padding: 100px 0 20px;"></div>
+
+  <!-- Main Body Details Layout -->
+  <main class="container section-padding">
+    <div class="details-layout">
+      <!-- Left Primary Content Column -->
+      <section class="details-main-content">
+        <!-- Gallery slider -->
+        <div class="gallery-container">
+          <div class="gallery-main-wrapper">
+            <img class="gallery-main-img" id="gallery-main-img" src="images/products/serum_11zon.webp" alt="Product Details" style="cursor: zoom-in;">
+          </div>
+          <div class="gallery-thumbnails" id="gallery-thumbnails">
+            <!-- JS populates thumbnails -->
+          </div>
+        </div>
+
+        <!-- Title, Price and Meta -->
+        <div class="details-header">
+          <div class="details-title-row">
+            <h1 id="details-title">Loading Product Title...</h1>
+            <span class="details-price" id="details-price">$0</span>
+          </div>
+          <div class="details-meta-tags">
+            <span class="details-meta-tag" id="details-type">Category</span>
+            <span class="details-meta-tag" id="details-city">Brand</span>
+            <span class="details-meta-tag">Derm-Tested</span>
+            <span class="details-meta-tag">100% Genuine</span>
+          </div>
+          <p id="details-address" style="font-size: 1rem; color: var(--slate-500); display: flex; align-items: center; gap: 0.5rem;">
+            <svg viewBox="0 0 24 24" style="width: 16px; fill: var(--slate-400);"><path d="M12,2C8.13,2,5,5.13,5,9c0,5.25,7,13,7,13s7-7.75,7-13C19,5.13,15.87,2,12,2z M12,11.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5S13.38,11.5,12,11.5z"/></svg>
+            Loading suitability...
+          </p>
+        </div>
+
+        <!-- Specifications summary -->
+        <div class="details-specs">
+          <div class="details-spec-item">
+            <h4>Rating</h4>
+            <p id="details-beds">0</p>
+          </div>
+          <div class="details-spec-item">
+            <h4>Reviews</h4>
+            <p id="details-baths">0</p>
+          </div>
+          <div class="details-spec-item">
+            <h4>Volume</h4>
+            <p id="details-area">0</p>
+          </div>
+          <div class="details-spec-item">
+            <h4>Key Claims</h4>
+            <p id="details-parking">Vegan</p>
+          </div>
+        </div>
+
+        <!-- Description block -->
+        <div class="details-block">
+          <h3>Formulation Overview</h3>
+          <p id="details-description">Overview text is loading...</p>
+        </div>
+
+        <!-- Amenities block -->
+        <div class="details-block">
+          <h3>Active Ingredients & Benefits</h3>
+          <div class="grid amenities-grid" id="amenities-grid">
+            <!-- JS generates check items -->
+          </div>
+        </div>
+
+        <!-- Ingredient blueprint block -->
+        <div class="details-block">
+          <h3>Ingredient Traceability & Quality Blueprint</h3>
+          <div class="floor-plan-box" style="background-color: var(--white); border: 1px solid var(--slate-200); border-radius: var(--radius-lg); padding: var(--spacing-md); text-align: center;">
+            <img class="floor-plan-img" src="images/products/cream_11zon.webp" alt="Active Ingredients Blueprint" loading="lazy" style="max-width: 100%; height: 260px; object-fit: contain; border-radius: 8px;">
+            <p style="font-size: 0.85rem; color: var(--slate-500); margin-top: 10px;">100% trace-monitored ingredient sourcing. Our botanical extraction clinics follow WHO GMP guidelines for safety and maximum active preservation.</p>
+          </div>
+        </div>
+
+        <!-- Quality Verification Block -->
+        <div class="details-block">
+          <h3>Esthetic Purity Certification</h3>
+          <div class="map-placeholder" style="height: 250px; background-color: var(--primary); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: var(--white); position: relative; overflow: hidden;">
+            <div class="map-placeholder-content" style="position: relative; z-index: 2; text-align: center;">
+              <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; fill: var(--secondary); margin-bottom: var(--spacing-xs);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+              <h4 style="color: #FFFFFF;">Verified Formulation Purity</h4>
+              <p style="color: var(--slate-300); font-size: 0.9rem; padding: 0 1rem;">Purity coordinates and clinical tests clearance certified by Stackly Beauty esthetic board.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column Sidebar Widgets -->
+      <aside class="details-sidebar">
+        <!-- Agent Card -->
+        <div class="glass-card sidebar-agent-card">
+          <img class="sidebar-agent-avatar" id="agent-avatar" src="images/experts/expert-1.webp" alt="Beauty Advisor">
+          <h4 id="agent-name">Skincare Advisor</h4>
+          <p id="agent-designation">Elite Skincare Specialist</p>
+          
+          <div class="agent-stats">
+            <div class="agent-stat-item">
+              <h5>Experience</h5>
+              <p id="agent-experience">10 Years</p>
+            </div>
+            <div class="agent-stat-item">
+              <h5>Consultations</h5>
+              <p id="agent-sold">200+ Done</p>
+            </div>
+          </div>
+          
+          <a href="contact.html" class="btn btn-primary btn-shimmer" style="width: 100%;">Contact Expert</a>
+        </div>
+
+        <!-- Mortgage/Daily Regimen Calculator Card -->
+        <div class="glass-card mortgage-calculator-card">
+          <h3 style="font-size: 1.15rem; margin-bottom: var(--spacing-md); color: var(--primary); font-family: var(--font-sans);">Beauty Regimen Cost Estimator</h3>
+          <div class="mortgage-sliders">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" style="display:flex; justify-content:space-between; font-weight:600;">
+                <span>Routine Value</span>
+                <span id="lbl-mortgage-price" style="color: var(--secondary); font-weight:700;">$0</span>
+              </label>
+              <input type="range" class="range-input" id="mortgage-price" min="10" max="200" step="5" value="48" aria-label="Routine Value Slider">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" style="display:flex; justify-content:space-between; font-weight:600;">
+                <span>Loyalty Discount</span>
+                <span id="lbl-mortgage-down" style="color: var(--secondary); font-weight:700;">$0</span>
+              </label>
+              <input type="range" class="range-input" id="mortgage-down" min="0" max="50" step="2" value="5" aria-label="Discount Slider">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" style="display:flex; justify-content:space-between; font-weight:600;">
+                <span>Frequency Per Day</span>
+                <span id="lbl-mortgage-rate" style="color: var(--secondary); font-weight:700;">1x daily</span>
+              </label>
+              <input type="range" class="range-input" id="mortgage-rate" min="1" max="3" step="1" value="1" aria-label="Frequency Slider">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" style="display:flex; justify-content:space-between; font-weight:600;">
+                <span>Product Lifespan</span>
+                <span id="lbl-mortgage-term" style="color: var(--secondary); font-weight:700;">60 Days</span>
+              </label>
+              <input type="range" class="range-input" id="mortgage-term" min="30" max="180" step="10" value="60" aria-label="Lifespan Slider">
+            </div>
+          </div>
+
+          <div class="mortgage-output" style="background-color: var(--slate-50); padding: var(--spacing-md); border-radius: var(--radius-md); border: 1px solid var(--slate-100); text-align: center;">
+            <span class="mortgage-output-label" style="font-size: 0.85rem; text-transform: uppercase; color: var(--slate-500); font-weight: 600;">Daily Cost of Beauty Routine</span>
+            <div class="mortgage-output-price" id="mortgage-payment-output" style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 2px;">$0</div>
+            <span style="font-size:0.75rem; color:var(--slate-500);">Excludes regional taxes and custom shipping fees.</span>
+          </div>
+        </div>
+
+        <!-- Schedule Visit Card -->
+        <div class="glass-card" style="padding: var(--spacing-lg); margin-top: var(--spacing-lg);">
+          <h3 style="font-size: 1.15rem; margin-bottom: var(--spacing-md); color: var(--primary); font-family: var(--font-sans);">Schedule Free Consult</h3>
+          <form id="visit-schedule-form">
+            <div class="form-group">
+              <label class="form-label" for="visit-date">Preferred Date</label>
+              <input type="date" class="form-control" id="visit-date" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="visit-time">Preferred Slot</label>
+              <select class="form-control" id="visit-time" required>
+                <option value="10:00 AM">10:00 AM - 12:00 PM</option>
+                <option value="02:00 PM">02:00 PM - 04:00 PM</option>
+                <option value="06:00 PM">06:00 PM - 08:00 PM</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="visit-name">Your Full Name</label>
+              <input type="text" class="form-control" id="visit-name" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="visit-email">Email Address</label>
+              <input type="email" class="form-control" id="visit-email" placeholder="john@example.com" required>
+            </div>
+
+            <button type="submit" class="btn btn-secondary btn-shimmer" style="width: 100%;">Book Consultation</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Similar Products Recommendation Block -->
+    <section class="reveal reveal-up" style="margin-top: var(--spacing-xxl);">
+      <h3 style="font-size: 1.6rem; margin-bottom: var(--spacing-lg); border-left: 4px solid var(--secondary); padding-left: 10px; font-family: var(--font-serif);">Similar Formulations</h3>
+      <div class="grid similar-properties-grid" id="similar-properties-grid">
+        <!-- JS hydrates recommendations -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="custom-footer" style="background-color: var(--bg-dark); color: var(--slate-300); padding: var(--spacing-xxl) 0 var(--spacing-lg); border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container">
+      <div class="custom-footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 2fr; gap: var(--spacing-xl);">
+        <div>
+          <a href="index.html" class="logo" style="display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 800; font-size: 1.4rem; color: #FFFFFF; margin-bottom: 1rem; text-decoration: none;" aria-label="Stackly Home">
+            <img class="logo-img" src="images/stackly-logo.webp" alt="Stackly Logo">
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--slate-400); margin-bottom: 1rem;">India's most trusted premium cosmetics & luxury skincare store. We bring you the best in formulation science with genuine brands, amazing pricing, and expert guidance.</p>
+          <div class="footer-social-boxes" style="display: flex; gap: 0.5rem;">
+            <a href="404.html" class="footer-social-btn" aria-label="Facebook">f</a>
+            <a href="404.html" class="footer-social-btn" aria-label="Twitter">𝕏</a>
+            <a href="404.html" class="footer-social-btn" aria-label="Instagram">📷</a>
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title" style="color: #FFFFFF; font-weight: 700; font-size: 0.95rem; letter-spacing: 1px; margin-bottom: 1.25rem;">QUICK LINKS</div>
+          <ul class="footer-links-list" style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Home</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; About Us</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="products.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Products</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="blog.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Blog</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title" style="color: #FFFFFF; font-weight: 700; font-size: 0.95rem; letter-spacing: 1px; margin-bottom: 1.25rem;">CATEGORIES</div>
+          <ul class="footer-links-list" style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;"><a href="404.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Luxury Serums</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="404.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Velvet Lipsticks</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="404.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Hydrating Creams</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="404.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Argan Hair Masks</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="404.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Jasmine Perfumes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title" style="color: #FFFFFF; font-weight: 700; font-size: 0.95rem; letter-spacing: 1px; margin-bottom: 1.25rem;">CONTACT US</div>
+          <div class="footer-contact-row" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--slate-400);">
+            <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: var(--secondary); flex-shrink:0;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>42, Beauty Hub, Koramangala, Bangalore - 560034</span>
+          </div>
+          <div class="footer-contact-row" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--slate-400);">
+            <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: var(--secondary); flex-shrink:0;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>+91 800 123 4567</span>
+          </div>
+          <div class="footer-contact-row" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--slate-400);">
+            <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: var(--secondary); flex-shrink:0;"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>support@stacklybeauty.in</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: var(--spacing-lg); margin-top: var(--spacing-xl); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <p style="font-size: 0.85rem; color: var(--slate-500);">&copy; 2026 Stackly Beauty Pvt. Ltd. All rights reserved.</p>
+        <ul class="footer-bottom-links" style="display: flex; gap: 1.5rem; list-style: none; padding: 0;">
+          <li><a href="404.html" style="font-size: 0.85rem; color: var(--slate-500);">Privacy Policy</a></li>
+          <li><a href="404.html" style="font-size: 0.85rem; color: var(--slate-500);">Terms of Service</a></li>
+          <li><a href="404.html" style="font-size: 0.85rem; color: var(--slate-500);">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages/product-details.js"></script>
+</body>
+</html>

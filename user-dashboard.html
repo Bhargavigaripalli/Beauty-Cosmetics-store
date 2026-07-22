@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard | Stackly Beauty</title>
+  <meta name="description" content="View saved products, skincare consult schedules, and routine comparison tables.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/dashboards.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <!-- Mobile top header bar -->
+    <div class="dashboard-mobile-bar">
+      <a href="index.html" class="logo" aria-label="Stackly Home">
+        <img class="logo-img" src="images/stackly-logo.webp" alt="Stackly Logo">
+      </a>
+      <button class="sidebar-toggle-btn" aria-label="Toggle Dashboard Menu">
+        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      </button>
+    </div>
+
+    <!-- Sidebar Layout panel -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo" aria-label="Stackly Home">
+          <img class="logo-img" src="images/stackly-logo.webp" alt="Stackly Logo">
+        </a>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item">
+          <a href="#" data-tab="user-tab-dashboard" class="sidebar-link active">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor;"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+            Dashboard
+          </a>
+        </li>
+        <li class="sidebar-item"><a href="#" data-tab="user-tab-saved" class="sidebar-link"><svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> Saved Products</a></li>
+        <li class="sidebar-item"><a href="#" data-tab="user-tab-bookings" class="sidebar-link"><svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor;"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg> My Bookings</a></li>
+        <li class="sidebar-item"><a href="#" data-tab="user-tab-compare" class="sidebar-link"><svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor;"><path d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z"/></svg> Compare</a></li>
+        <li class="sidebar-item"><a href="#" data-tab="user-tab-wishlist" class="sidebar-link"><svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> Wishlist</a></li>
+        <li class="sidebar-item"><a href="#" data-tab="user-tab-messages" class="sidebar-link"><svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor;"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg> Messages</a></li>
+        <li class="sidebar-item"><a href="#" data-tab="user-tab-notifications" class="sidebar-link"><svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor;"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg> Notifications</a></li>
+        <li class="sidebar-item"><a href="#" data-tab="user-tab-profile" class="sidebar-link"><svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor;"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg> Skin Profile</a></li>
+        <li class="sidebar-item"><a href="#" data-tab="user-tab-settings" class="sidebar-link"><svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor;"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg> Settings</a></li>
+        
+        <li class="sidebar-item" style="margin-top: auto;">
+          <a href="login.html" class="sidebar-link" style="color: #EF4444;">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill: #EF4444;"><path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+            Logout
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-user-badge">
+        <img class="sidebar-user-avatar" src="images/experts/expert-4.webp" alt="User Profile Image">
+        <div class="sidebar-user-name">
+          <h5>Bhargavi Garipalli</h5>
+          <p>Gold Patron Member</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Board -->
+    <main class="dashboard-main">
+      <!-- PANEL 1: Dashboard Overview -->
+      <div class="dashboard-tab-panel active" id="user-tab-dashboard">
+        <div class="dashboard-header-row">
+          <div>
+            <h1>Patron Portal</h1>
+            <p style="color: var(--slate-500);">Review your skincare routines, saved products, and consultant meetings.</p>
+          </div>
+          <div class="dashboard-actions-row">
+            <a href="products.html" class="btn btn-primary btn-sm btn-shimmer">Browse Catalog</a>
+          </div>
+        </div>
+
+        <!-- KPI metrics -->
+        <section class="dashboard-kpis">
+          <div class="kpi-card">
+            <div class="kpi-details">
+              <h4>Saved Products</h4>
+              <p>6 Formulations</p>
+            </div>
+            <div class="kpi-icon-box blue" style="background: rgba(59,130,246,0.1); color: #3b82f6;">
+              <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-details">
+              <h4>Saved Concerns</h4>
+              <p>3 Profiles</p>
+            </div>
+            <div class="kpi-icon-box gold" style="background: rgba(212,175,55,0.1); color: var(--secondary);">
+              <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-details">
+              <h4>Consultations</h4>
+              <p>2 Scheduled</p>
+            </div>
+            <div class="kpi-icon-box green" style="background: rgba(16,185,129,0.1); color: #10b981;">
+              <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-details">
+              <h4>Derm Clearance</h4>
+              <p>Verified Active</p>
+            </div>
+            <div class="kpi-icon-box sky" style="background: rgba(6,182,212,0.1); color: #06b6d4;">
+              <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+            </div>
+          </div>
+        </section>
+
+        <!-- Feeds Grid -->
+        <div class="grid dashboard-grid-2">
+          <div style="display:flex; flex-direction:column; gap:2rem;">
+            <div class="dashboard-panel-card">
+              <h3>Recently Viewed Products</h3>
+              <div class="dashboard-table-wrapper">
+                <table class="dashboard-table">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Brand</th>
+                      <th>Price</th>
+                      <th>Verification</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>The Hydrated Serum</strong></td>
+                      <td>Chanel</td>
+                      <td>$48</td>
+                      <td><span class="badge-status approved">Clear</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Elysian Hair Mask</strong></td>
+                      <td>Estée Lauder</td>
+                      <td>$36</td>
+                      <td><span class="badge-status approved">Clear</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Skyline Silk Lipstick</strong></td>
+                      <td>Dior</td>
+                      <td>$29</td>
+                      <td><span class="badge-status pending">Pending</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="dashboard-panel-card">
+              <h3>Exclusive Formulation Recommendations</h3>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+                <div class="glass-card" style="padding:10px;">
+                  <img src="images/products/perfume_11zon.webp" alt="Perfume" style="width:100%; height:120px; object-fit:cover; border-radius:4px; margin-bottom:5px;">
+                  <h5 style="margin:0;">Jasmine Musk Fragrance</h5>
+                  <span style="font-size:0.8rem; color:var(--secondary); font-weight:700;">$79.00</span>
+                </div>
+                <div class="glass-card" style="padding:10px;">
+                  <img src="images/products/hairmask_11zon.webp" alt="Hair Mask" style="width:100%; height:120px; object-fit:cover; border-radius:4px; margin-bottom:5px;">
+                  <h5 style="margin:0;">Argan Shine Hair Mask</h5>
+                  <span style="font-size:0.8rem; color:var(--secondary); font-weight:700;">$36.50</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:2rem;">
+            <div class="dashboard-panel-card">
+              <h3>Schedule Timeline</h3>
+              <div class="activity-timeline">
+                <div class="timeline-event">
+                  <span class="timeline-event-dot"></span>
+                  <div class="timeline-event-info">
+                    <h5>Barrier Analysis Consult</h5>
+                    <p>Scheduled: July 20, 2026 at 02:00 PM</p>
+                  </div>
+                </div>
+
+                <div class="timeline-event">
+                  <span class="timeline-event-dot"></span>
+                  <div class="timeline-event-info">
+                    <h5>Shade Custom Formulation</h5>
+                    <p>Scheduled: July 24, 2026 at 11:30 AM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-panel-card">
+              <h3>Recent Concerns Searches</h3>
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <div style="padding:0.5rem; background:var(--slate-50); border-radius:4px; font-size:0.85rem;">
+                  <strong>Dullness & Glow</strong> in <strong>Skincare</strong>
+                </div>
+                <div style="padding:0.5rem; background:var(--slate-50); border-radius:4px; font-size:0.85rem;">
+                  <strong>Long-wear</strong> in <strong>Matte Lipsticks</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 2: Saved Products -->
+      <div class="dashboard-tab-panel" id="user-tab-saved">
+        <div class="dashboard-header-row">
+          <div>
+            <h1>Saved Products</h1>
+            <p style="color: var(--slate-500);">Your curated portfolio of bookmarked luxury beauty formulations.</p>
+          </div>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+          <div class="dashboard-panel-card">
+            <img src="images/products/serum_11zon.webp" alt="Serum" style="width:100%; height:160px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+            <h4>The Hydrated Serum</h4>
+            <p style="color:var(--secondary); font-weight:700; margin-bottom:0.5rem;">$48.00</p>
+            <p style="font-size:0.85rem; color:var(--slate-500); margin-bottom:1rem;">Chanel • 50 ml • Niacinamide Actives</p>
+            <a href="product-details.html?id=1" class="btn btn-outline-gold btn-sm" style="width:100%;">View Details</a>
+          </div>
+
+          <div class="dashboard-panel-card">
+            <img src="images/products/lipstick_11zon.webp" alt="Lipstick" style="width:100%; height:160px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+            <h4>Silk Lip Color</h4>
+            <p style="color:var(--secondary); font-weight:700; margin-bottom:0.5rem;">$29.00</p>
+            <p style="font-size:0.85rem; color:var(--slate-500); margin-bottom:1rem;">Fenty Beauty • 5 ml • Longwear Shimmer</p>
+            <a href="product-details.html?id=2" class="btn btn-outline-gold btn-sm" style="width:100%;">View Details</a>
+          </div>
+
+          <div class="dashboard-panel-card">
+            <img src="images/products/cream_11zon.webp" alt="Cream" style="width:100%; height:160px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+            <h4>Moist Gel Cream</h4>
+            <p style="color:var(--secondary); font-weight:700; margin-bottom:0.5rem;">$62.00</p>
+            <p style="font-size:0.85rem; color:var(--slate-500); margin-bottom:1rem;">Dior • 100 ml • Intense Hyaluronic</p>
+            <a href="product-details.html?id=6" class="btn btn-outline-gold btn-sm" style="width:100%;">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 3: My Bookings -->
+      <div class="dashboard-tab-panel" id="user-tab-bookings">
+        <div class="dashboard-header-row">
+          <div>
+            <h1>My Scheduled Bookings</h1>
+            <p style="color: var(--slate-500);">Track your confirmed skin coaching sessions and digital clinical mappings.</p>
+          </div>
+        </div>
+        <div class="dashboard-panel-card">
+          <div class="dashboard-table-wrapper">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Consultation</th>
+                  <th>Specialist</th>
+                  <th>Date & Time</th>
+                  <th>Medium</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#BK-9402</td>
+                  <td><strong>Skin Barrier Check</strong></td>
+                  <td>Dr. Evelyn Ross</td>
+                  <td>July 22, 2026 • 02:00 PM</td>
+                  <td>Video Call</td>
+                  <td><span class="badge-status approved">Confirmed</span></td>
+                </tr>
+                <tr>
+                  <td>#BK-8319</td>
+                  <td><strong>Shade Matching Session</strong></td>
+                  <td>Aisha Sharma</td>
+                  <td>July 25, 2026 • 11:30 AM</td>
+                  <td>Chat Room Support</td>
+                  <td><span class="badge-status pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>#BK-7201</td>
+                  <td><strong>Anti-Wrinkle Analysis</strong></td>
+                  <td>Dr. Evelyn Ross</td>
+                  <td>July 10, 2026 • 04:00 PM</td>
+                  <td>Video Call</td>
+                  <td><span class="badge-status approved">Completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 4: Compare -->
+      <div class="dashboard-tab-panel" id="user-tab-compare">
+        <div class="dashboard-header-row">
+          <div>
+            <h1>Compare Beauty Shortlists</h1>
+            <p style="color: var(--slate-500);">Side-by-side technical evaluation of your shortlisted formulations.</p>
+          </div>
+        </div>
+        <div class="dashboard-panel-card">
+          <div class="dashboard-table-wrapper">
+            <table class="dashboard-table" style="text-align:center;">
+              <thead>
+                <tr>
+                  <th style="text-align:left;">Specification</th>
+                  <th>Hydrated Serum</th>
+                  <th>Silk Lip Color</th>
+                  <th>Moist Gel Cream</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align:left;"><strong>Listed Price</strong></td>
+                  <td><span style="color:var(--secondary); font-weight:700;">$48.00</span></td>
+                  <td><span style="color:var(--secondary); font-weight:700;">$29.00</span></td>
+                  <td><span style="color:var(--secondary); font-weight:700;">$62.00</span></td>
+                </tr>
+                <tr>
+                  <td style="text-align:left;"><strong>Brand</strong></td>
+                  <td>Chanel</td>
+                  <td>Fenty Beauty</td>
+                  <td>Dior</td>
+                </tr>
+                <tr>
+                  <td style="text-align:left;"><strong>Category</strong></td>
+                  <td>Skincare</td>
+                  <td>Makeup</td>
+                  <td>Skincare</td>
+                </tr>
+                <tr>
+                  <td style="text-align:left;"><strong>Volume</strong></td>
+                  <td>50 ml</td>
+                  <td>5 ml</td>
+                  <td>100 ml</td>
+                </tr>
+                <tr>
+                  <td style="text-align:left;"><strong>Key Claims</strong></td>
+                  <td>Niacinamide / Dullness</td>
+                  <td>Longwear / Hydration</td>
+                  <td>Squalane / Aging</td>
+                </tr>
+                <tr>
+                  <td style="text-align:left;"><strong>Efficacy Rating</strong></td>
+                  <td>★ 5.0</td>
+                  <td>★ 4.0</td>
+                  <td>★ 5.0</td>
+                </tr>
+                <tr>
+                  <td style="text-align:left;"><strong>Cruelty-Free</strong></td>
+                  <td><span class="badge-status approved">Yes</span></td>
+                  <td><span class="badge-status approved">Yes</span></td>
+                  <td><span class="badge-status approved">Yes</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 5: Wishlist -->
+      <div class="dashboard-tab-panel" id="user-tab-wishlist">
+        <div class="dashboard-header-row">
+          <div>
+            <h1>My Wishlist</h1>
+            <p style="color: var(--slate-500);">Keep track of luxury formulations you intend to buy.</p>
+          </div>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 1.5rem;" id="dashboard-wishlist-grid">
+          <div class="dashboard-panel-card" style="display:flex; gap:1rem; align-items:center;">
+            <img src="images/products/serum_11zon.webp" style="width:140px; height:100px; object-fit:cover; border-radius:6px;">
+            <div style="flex-grow:1;">
+              <h4>The Hydrated Serum</h4>
+              <p style="color:var(--secondary); font-weight:700; margin-bottom:5px;">$48.00</p>
+              <button class="btn btn-outline-gold btn-sm">Book Consult</button>
+            </div>
+          </div>
+
+          <div class="dashboard-panel-card" style="display:flex; gap:1rem; align-items:center;">
+            <img src="images/products/cream_11zon.webp" style="width:140px; height:100px; object-fit:cover; border-radius:6px;">
+            <div style="flex-grow:1;">
+              <h4>Moist Gel Cream</h4>
+              <p style="color:var(--secondary); font-weight:700; margin-bottom:5px;">$62.00</p>
+              <button class="btn btn-outline-gold btn-sm">Book Consult</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 6: Messages -->
+      <div class="dashboard-tab-panel" id="user-tab-messages">
+        <div class="dashboard-header-row">
+          <div>
+            <h1>Advisory Messages</h1>
+            <p style="color: var(--slate-500);">Direct communication channel with your assigned skin coach dermatologist advisors.</p>
+          </div>
+        </div>
+        <div class="dashboard-panel-card" style="display:grid; grid-template-columns:1fr 2fr; gap:1.5rem; min-height:360px;">
+          <!-- Left Advisor List -->
+          <div style="border-right:1px solid var(--slate-100); padding-right:1rem;">
+            <h4 style="margin-bottom:1rem;">Conversations</h4>
+            <div style="padding:0.75rem; background:var(--slate-100); border-radius:6px; margin-bottom:0.5rem; cursor:pointer;">
+              <strong>Dr. Evelyn Ross</strong>
+              <p style="font-size:0.75rem; color:var(--slate-500); margin:0;">Formulation analysis chart sent...</p>
+            </div>
+            <div style="padding:0.75rem; background:var(--slate-50); border-radius:6px; margin-bottom:0.5rem; cursor:pointer;">
+              <strong>Aisha Sharma</strong>
+              <p style="font-size:0.75rem; color:var(--slate-500); margin:0;">Shade matching session scheduled...</p>
+            </div>
+          </div>
+
+          <!-- Right Chat Thread -->
+          <div style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="border-bottom:1px solid var(--slate-100); padding-bottom:0.5rem; margin-bottom:1rem;">
+                <h4 style="margin:0;">Dr. Evelyn Ross (Principal Esthetic Advisor)</h4>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:1rem;">
+                <div style="background:var(--slate-100); padding:0.75rem; border-radius:8px; max-width:80%;">
+                  <p style="margin:0; font-size:0.85rem;">Hello Ms. Garipalli, the custom active formulation chart for dry skin concerns is cleared. Please review the attached routine chart.</p>
+                  <span style="font-size:0.7rem; color:var(--slate-400);">10:14 AM</span>
+                </div>
+                <div style="background:var(--primary); color:var(--white); padding:0.75rem; border-radius:8px; max-width:80%; align-self:flex-end;">
+                  <p style="margin:0; font-size:0.85rem;">Thank you Evelyn. I will review and let you know if I need changes in the morning routine.</p>
+                  <span style="font-size:0.7rem; color:var(--slate-300);">10:20 AM</span>
+                </div>
+              </div>
+            </div>
+            
+            <div style="display:flex; gap:0.5rem; margin-top:1rem;">
+              <input type="text" class="form-control" placeholder="Type message..." style="flex-grow:1;">
+              <button class="btn btn-primary btn-sm">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 7: Notifications -->
+      <div class="dashboard-tab-panel" id="user-tab-notifications">
+        <div class="dashboard-header-row">
+          <div>
+            <h1>Notifications & Alerts</h1>
+            <p style="color: var(--slate-500);">Stay informed on price drops, clinical clearances, and appointment confirmations.</p>
+          </div>
+        </div>
+        <div class="dashboard-panel-card">
+          <div style="display:flex; flex-direction:column; gap:1rem;">
+            <div style="padding:1rem; border-left:4px solid var(--secondary); background:var(--slate-50); border-radius:4px;">
+              <h5 style="margin:0 0 4px 0;">Price Drop Alert: Moist Gel Cream</h5>
+              <p style="font-size:0.85rem; color:var(--slate-600); margin:0;">Price reduced by $10 on your bookmarked Dior gel cream listing.</p>
+              <span style="font-size:0.75rem; color:var(--slate-400);">2 hours ago</span>
+            </div>
+
+            <div style="padding:1rem; border-left:4px solid var(--accent); background:var(--slate-50); border-radius:4px;">
+              <h5 style="margin:0 0 4px 0;">Consultation Confirmed</h5>
+              <p style="font-size:0.85rem; color:var(--slate-600); margin:0;">Your video consult with Dr. Evelyn Ross is confirmed for July 22 at 02:00 PM.</p>
+              <span style="font-size:0.75rem; color:var(--slate-400);">1 day ago</span>
+            </div>
+
+            <div style="padding:1rem; border-left:4px solid var(--primary); background:var(--slate-50); border-radius:4px;">
+              <h5 style="margin:0 0 4px 0;">Active Ingredients Safety Certified</h5>
+              <p style="font-size:0.85rem; color:var(--slate-600); margin:0;">Our formulation board has verified batch certificate #HYD-9402.</p>
+              <span style="font-size:0.75rem; color:var(--slate-400);">3 days ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 8: Profile -->
+      <div class="dashboard-tab-panel" id="user-tab-profile">
+        <div class="dashboard-header-row">
+          <div>
+            <h1>Patron Skin Profile</h1>
+            <p style="color: var(--slate-500);">Manage your personal parameters and skin concern history.</p>
+          </div>
+        </div>
+        <div class="grid" style="grid-template-columns:1fr 2fr; gap:2rem;">
+          <div class="dashboard-panel-card" style="text-align:center;">
+            <img src="images/experts/expert-4.webp" style="width:100px; height:100px; border-radius:50%; object-fit:cover; border:3px solid var(--secondary); margin:0 auto 1rem;">
+            <h4>Bhargavi Garipalli</h4>
+            <span style="background:var(--secondary); color:var(--primary); font-size:0.75rem; font-weight:700; padding:2px 10px; border-radius:4px;">Gold Patron Member</span>
+            <p style="font-size:0.85rem; color:var(--slate-500); margin-top:1rem;">Member Since: January 2026<br>Priority Skin Support Active</p>
+          </div>
+
+          <div class="dashboard-panel-card">
+            <h3>Personal Information & Skin Goals</h3>
+            <form>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+                <div>
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-control" value="Bhargavi Garipalli">
+                </div>
+                <div>
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" value="bhargavi@example.com">
+                </div>
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+                <div>
+                  <label class="form-label">Mobile Number</label>
+                  <input type="text" class="form-control" value="+91 98765 43210">
+                </div>
+                <div>
+                  <label class="form-label">Primary Skin Type</label>
+                  <select class="form-control">
+                    <option selected>Combination Skin Type</option>
+                    <option>Dry Skin Type</option>
+                    <option>Oily Skin Type</option>
+                    <option>Sensitive Skin Type</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm btn-shimmer">Save Changes</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 9: Settings -->
+      <div class="dashboard-tab-panel" id="user-tab-settings">
+        <div class="dashboard-header-row">
+          <div>
+            <h1>Security & Preferences</h1>
+            <p style="color: var(--slate-500);">Configure password controls and alert parameters.</p>
+          </div>
+        </div>
+        <div class="grid" style="grid-template-columns:1fr 1fr; gap:2rem;">
+          <div class="dashboard-panel-card">
+            <h3>Password & Security</h3>
+            <form>
+              <div style="margin-bottom:1rem;">
+                <label class="form-label">Current Password</label>
+                <input type="password" class="form-control" value="••••••••">
+              </div>
+              <div style="margin-bottom:1rem;">
+                <label class="form-label">New Password</label>
+                <input type="password" class="form-control" placeholder="Minimum 8 characters">
+              </div>
+              <button type="submit" class="btn btn-secondary btn-sm btn-shimmer">Update Password</button>
+            </form>
+          </div>
+
+          <div class="dashboard-panel-card">
+            <h3>Preferences</h3>
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <strong>Email Market Briefings</strong>
+                  <p style="font-size:0.75rem; color:var(--slate-500); margin:0;">Receive weekly high-yield formulation analysis updates</p>
+                </div>
+                <input type="checkbox" checked style="width:20px; height:20px;">
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <strong>SMS Price Drop Alerts</strong>
+                  <p style="font-size:0.75rem; color:var(--slate-500); margin:0;">Instant notification when saved items drop in price</p>
+                </div>
+                <input type="checkbox" checked style="width:20px; height:20px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages/dashboards.js"></script>
+</body>
+</html>

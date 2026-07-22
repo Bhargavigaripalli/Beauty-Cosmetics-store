@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Beauty | Premium Cosmetics & Skincare Store</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover premium luxury skincare, makeup, haircare, and fragrances with Stackly Beauty. Dermatologist tested, organic ingredients, and cruelty-free certified.">
+  <meta name="keywords" content="Beauty Store, Skincare, Luxury Makeup, Vegan Cosmetics, Organic Haircare, Jasmine Musk Perfume, Estée Lauder, Dior, Chanel">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stackly Beauty | Premium Cosmetics & Skincare Store">
+  <meta property="og:description" content="Discover premium luxury skincare, makeup, haircare, and fragrances with India's premier beauty boutique.">
+  <meta property="og:image" content="images/hero-beauty_11zon.webp">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container" id="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Sticky Navbar Header -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo" id="nav-brand-logo" aria-label="Stackly Home">
+        <img class="logo-img" src="images/stackly-logo.webp" alt="Stackly Logo">
+      </a>
+      
+      <button class="hamburger" id="navbar-hamburger" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navbar-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm btn-shimmer">Login</a>
+        <a href="create-account.html" class="btn btn-secondary btn-sm btn-shimmer">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: Hero Area with Advanced Search -->
+  <main>
+    <section class="hero" id="hero-section">
+      <div class="hero-bg" style="background-image: url('images/hero-beauty_11zon.webp');"></div>
+      <div class="hero-overlay"></div>
+      <div class="skyline-backdrop"></div>
+      
+      <!-- Floating Blur Blobs behind the media cards -->
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+
+      <div class="container hero-content">
+        <!-- LEFT COLUMN: Typography & Finder -->
+        <div class="hero-left">
+          <span class="hero-subtitle">Curated Active Formulations & Luxury Aesthetics</span>
+          <h1 class="hero-title">Discover Your<br><span>Luminous</span> Skin Health</h1>
+          <p class="hero-desc">Explore verified dermatologist-tested cosmetic products, trace-monitored ingredient lists, and book direct consultations with elite beauty advisors.</p>
+          
+          <!-- Search bar panel -->
+          <div class="glass-panel search-panel glass-card-dark" id="hero-search-panel">
+            <div class="search-tabs">
+              <button class="search-tab-btn active">Shop Products</button>
+              <button class="search-tab-btn" onclick="window.location.href='products.html?type=Skincare'">Skincare</button>
+            </div>
+            <div class="search-fields-grid">
+              <div class="search-field">
+                <label for="search-type">Category</label>
+                <select id="search-type">
+                  <option value="">Any Category</option>
+                  <option value="Skincare">Skincare</option>
+                  <option value="Makeup">Makeup</option>
+                  <option value="Haircare">Haircare</option>
+                  <option value="Fragrance">Fragrance</option>
+                </select>
+              </div>
+              
+              <div class="search-field">
+                <label for="search-brand">Brand</label>
+                <select id="search-brand">
+                  <option value="">Any Brand</option>
+                  <option value="Chanel">Chanel</option>
+                  <option value="Dior">Dior</option>
+                  <option value="Fenty Beauty">Fenty Beauty</option>
+                  <option value="Estée Lauder">Estée Lauder</option>
+                  <option value="L'Oreal Luxe">L'Oreal Luxe</option>
+                </select>
+              </div>
+              
+              <div class="search-field">
+                <label for="search-concern">Skin Concern</label>
+                <select id="search-concern">
+                  <option value="">Any Concern</option>
+                  <option value="Dullness">Dullness & Glow</option>
+                  <option value="Dryness">Dryness & Hydration</option>
+                  <option value="Anti-Aging">Anti-Aging & Wrinkles</option>
+                  <option value="Frizzy">Hair Repair & Frizz</option>
+                </select>
+              </div>
+
+              <div class="search-field">
+                <label for="search-price">Max Budget</label>
+                <select id="search-price">
+                  <option value="">No Max</option>
+                  <option value="30">$30</option>
+                  <option value="50">$50</option>
+                  <option value="80">$80</option>
+                  <option value="100">$100</option>
+                </select>
+              </div>
+
+              <button class="btn btn-secondary btn-shimmer hero-search-btn" id="hero-search-btn">
+                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: var(--primary);"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                Search Products
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Luxury Framed Visuals -->
+        <div class="hero-right">
+          <!-- Floating stats badges -->
+          <div class="floating-stat-card stat-card-1 glass-card">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+            <div>
+              <h4>100% Pure</h4>
+              <p>Verified Actives</p>
+            </div>
+          </div>
+
+          <div class="floating-stat-card stat-card-2 glass-card">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <div>
+              <h4>4.9 / 5.0</h4>
+              <p>Patron Reviews</p>
+            </div>
+          </div>
+
+          <!-- Animated asymmetric image frame -->
+          <div class="hero-media-wrapper">
+            <div class="hero-media-frame"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Product Categories -->
+    <section class="section-padding container reveal reveal-up" id="categories-section">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Exquisite Formulations</span>
+        <h2 class="section-title">Select Your Beauty Regimen</h2>
+        <p class="section-desc text-center">Browse our collection categorized by clinical concerns and styling classes.</p>
+      </div>
+      <div class="grid categories-grid" id="categories-container">
+        <div class="glass-card category-card" onclick="window.location.href='products.html?type=Skincare'">
+          <div class="category-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm0-4h-2v-4h2v4zm0-6h-2V7h2v2z"/></svg>
+          </div>
+          <h4>Skincare</h4>
+          <p>Clinical Hydration</p>
+        </div>
+
+        <div class="glass-card category-card" onclick="window.location.href='products.html?type=Makeup'">
+          <div class="category-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 7V3L2 12h3v8h6v-6h2v6h6v-8h3L12 7zm5 11h-2v-4H9v4H7v-6.17l5-4.5 5 4.5V18z"/></svg>
+          </div>
+          <h4>Makeup</h4>
+          <p>Velvet Aesthetics</p>
+        </div>
+
+        <div class="glass-card category-card" onclick="window.location.href='products.html?type=Haircare'">
+          <div class="category-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.07 19.58 10.48 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+          </div>
+          <h4>Haircare</h4>
+          <p>Botanical Nourishment</p>
+        </div>
+
+        <div class="glass-card category-card" onclick="window.location.href='products.html?type=Fragrance'">
+          <div class="category-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h4>Fragrances</h4>
+          <p>Celestial Scents</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Featured Products -->
+    <section class="section-padding reveal reveal-up" style="background-color: var(--slate-50);" id="featured-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Premium Selections</span>
+          <h2 class="section-title">Featured Formulations</h2>
+          <p class="section-desc text-center">A curated portfolio representing our most celebrated luxury skincare and makeup essentials.</p>
+        </div>
+        
+        <!-- Hydrated dynamically from data.js -->
+        <div class="grid properties-home-grid" id="properties-home-grid">
+          <!-- JS hydrates this dynamic block -->
+        </div>
+        
+        <div class="text-center">
+          <a href="products.html" class="btn btn-primary btn-shimmer">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Why Choose Stackly Beauty -->
+    <section class="section-padding container reveal reveal-up" id="why-choose-section">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Uncompromising Standards</span>
+        <h2 class="section-title">Why Choose Stackly Beauty</h2>
+        <p class="section-desc text-center">Providing dermatologically certified beauty solutions that ensure your routines remain safe and highly effective.</p>
+      </div>
+      <div class="grid why-grid">
+        <div class="glass-card why-card">
+          <span class="why-card-num">01</span>
+          <h4>Dermatologist Tested</h4>
+          <p>Every active formulation undergoes rigorous clinical efficacy checks and dermatological verification.</p>
+        </div>
+
+        <div class="glass-card why-card">
+          <span class="why-card-num">02</span>
+          <h4>Cruelty-Free & Vegan</h4>
+          <p>We strictly oppose animal testing. Our signature ingredients are sustainably harvested and ethically certified.</p>
+        </div>
+
+        <div class="glass-card why-card">
+          <span class="why-card-num">03</span>
+          <h4>Clinical Consultations</h4>
+          <p>Direct digital access to certified estheticians and formulation specialists to craft custom routine maps.</p>
+        </div>
+
+        <div class="glass-card why-card">
+          <span class="why-card-num">04</span>
+          <h4>Label Transparency</h4>
+          <p>Full ingredient disclosure with zero parabens, synthetic fillers, sulfates, or hidden toxic additives.</p>
+        </div>
+
+        <div class="glass-card why-card">
+          <span class="why-card-num">05</span>
+          <h4>Active Botanicals</h4>
+          <p>Enriched with high-concentration clinical actives like squalane, hyaluronic acid, and cold-pressed argan oil.</p>
+        </div>
+
+        <div class="glass-card why-card">
+          <span class="why-card-num">06</span>
+          <h4>Immersive Routine Finder</h4>
+          <p>Advanced digital skin analysis matrices matching your exact sebum parameters to correct products.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Shop by Skin Type -->
+    <section class="section-padding reveal reveal-up" style="background-color: var(--slate-50);" id="locations-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Targeted Care</span>
+          <h2 class="section-title">Shop by Skin Type</h2>
+          <p class="section-desc text-center">Explore luxury product ranges specifically curated for your skin's unique behavior.</p>
+        </div>
+        <div class="grid locations-grid">
+          <div class="location-card" onclick="window.location.href='products.html?concern=sensitive'">
+            <img class="location-card-img" src="images/products/serum_11zon.webp" alt="Sensitive Skin" loading="lazy">
+            <div class="location-card-overlay">
+              <h4>Sensitive Skin Range</h4>
+              <p>Calming & Soothing formulations</p>
+            </div>
+          </div>
+
+          <div class="location-card" onclick="window.location.href='products.html?concern=dry'">
+            <img class="location-card-img" src="images/products/cream_11zon.webp" alt="Dry Skin" loading="lazy">
+            <div class="location-card-overlay">
+              <h4>Dehydrated & Dry Skin</h4>
+              <p>Intense Moisture Gel Creams</p>
+            </div>
+          </div>
+
+          <div class="location-card" onclick="window.location.href='products.html?concern=oily'">
+            <img class="location-card-img" src="images/products/foundation_11zon.webp" alt="Oily Skin" loading="lazy">
+            <div class="location-card-overlay">
+              <h4>Oily & Combination</h4>
+              <p>Sebum-Control Soft Focus Makeup</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Beauty Store Statistics -->
+    <section class="stats-banner text-center" id="statistics-section">
+      <div class="container grid stats-grid">
+        <div class="stat-item">
+          <span class="stat-num" data-target="8500" data-suffix="+">0</span>
+          <span class="stat-label">Products Dispatched</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="4200" data-suffix="+">0</span>
+          <span class="stat-label">Verified Patrons</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="4" data-suffix=" Ranges">0</span>
+          <span class="stat-label">Product Categories</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="15" data-suffix="+">0</span>
+          <span class="stat-label">Skincare Experts</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="8" data-suffix="">0</span>
+          <span class="stat-label">Quality Awards</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: Meet Our Skin Advisors -->
+    <section class="section-padding container reveal reveal-up" id="agents-section">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Skincare Estheticians</span>
+        <h2 class="section-title">Meet Our Beauty Advisors</h2>
+        <p class="section-desc text-center">Consult with certified formulation experts and cosmetic dermatologists.</p>
+      </div>
+      <div class="grid properties-home-grid" id="agents-home-grid">
+        <!-- Rendered dynamically by home.js/data.js -->
+      </div>
+    </section>
+
+    <!-- SECTION 8: Patron Testimonials -->
+    <section class="section-padding reveal reveal-up" style="background-color: var(--slate-50);" id="testimonials-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Esthetic Accolades</span>
+          <h2 class="section-title">What Our Patrons Say</h2>
+          <p class="section-desc text-center">Hear from our high-profile luxury beauty patrons.</p>
+        </div>
+        
+        <div class="testimonials-slider-container">
+          <div class="testimonials-slider">
+            <div class="testimonial-slide active">
+              <p class="testimonial-quote">"Stackly Beauty completely transformed my morning routines. The Rose Gold Elixir is pure magic. It deeply hydrates and gives my skin a luminous glow all day."</p>
+              <img class="testimonial-avatar" src="images/experts/expert-1.webp" alt="Client 1">
+              <div class="testimonial-author">
+                <h4>Aditi Roy</h4>
+                <p>Esthetic Connoisseur, Mumbai</p>
+              </div>
+            </div>
+            
+            <div class="testimonial-slide">
+              <p class="testimonial-quote">"Having direct chat consultations with Dr. Ross helped me solve my moisture barrier issues. I highly recommend their custom skincare routine finder!"</p>
+              <img class="testimonial-avatar" src="images/experts/expert-2.webp" alt="Client 2">
+              <div class="testimonial-author">
+                <h4>Kiran Sharma</h4>
+                <p>Wellness Director, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-dots">
+            <!-- JS dynamically creates dots -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: Latest Beauty Magazine -->
+    <section class="section-padding container reveal reveal-up" id="blogs-section">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Cosmetics Science</span>
+        <h2 class="section-title">Latest Beauty Magazine</h2>
+        <p class="section-desc text-center">Stay updated with scientific product layering guides, makeup tips, and skin health bulletins.</p>
+      </div>
+      
+      <div class="grid properties-home-grid" id="blogs-home-grid">
+        <!-- Rendered dynamically by data.js -->
+      </div>
+    </section>
+
+    <!-- SECTION 10: FAQ Section -->
+    <section class="section-padding reveal reveal-up" style="background-color: var(--slate-50);" id="faq-section">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Skin Education</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc text-center">Everything you need to know about purchasing, safety, and routines on Stackly Beauty.</p>
+        </div>
+        
+        <div class="accordion-container">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>How do you verify ingredient purity on Stackly Beauty?</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </button>
+            <div class="accordion-content">
+              <p>Every cosmetic product undergoes strict chromatography analysis and independent dermatologist screening. We verify active percentages, organic source claims, and ensure absence of synthetic fragrances, parabens, and microplastics before listing.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Can I get a personalized skincare routine consultation remotely?</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </button>
+            <div class="accordion-content">
+              <p>Absolutely. You can request a remote Video consultation with one of our certified skin specialists, or use the interactive Skin Profiler inside your user account dashboard to generate a custom routine map instantly.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Are all your luxury perfume bottles recyclable?</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </button>
+            <div class="accordion-content">
+              <p>Yes. We enforce sustainable luxury packaging guidelines. All glass sprayers, containers, and packaging boards use 100% recyclable, FSC-certified organic board and refillable containers to support carbon neutral goals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: Newsletter Section -->
+    <section class="section-padding container reveal reveal-up" id="newsletter-section">
+      <div class="glass-card newsletter-card">
+        <h2>Subscribe to the Stackly Beauty Brief</h2>
+        <p>Receive exclusive quarterly cosmetic launches, dermatologist skincare updates, and early access to limited edition fragrance plots directly in your inbox.</p>
+        <form class="newsletter-form" id="home-newsletter-form">
+          <input type="email" placeholder="Your Luxury Beauty Email Address" aria-label="Email Input" required>
+          <button type="submit" class="btn btn-primary btn-shimmer">Subscribe Now</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SECTION 12: Premium Call to Action -->
+    <section class="premium-cta" id="cta-section">
+      <div class="container premium-cta-content reveal reveal-up">
+        <h2>List Your Luxury Brand With Stackly</h2>
+        <p>Leverage our elite global patron database of high-end beauty consumers and advanced spatial layouts to showcase your formulations fast and securely.</p>
+        <a href="login.html" class="btn btn-secondary btn-shimmer">Become a Member</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- CTA Upgrade Banner -->
+  <section class="cta-banner-section" style="background-color: var(--primary); color: #FFFFFF; padding: var(--spacing-xl) 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="container">
+      <h2 style="color: #FFFFFF; font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 0.5rem;">Ready to Elevate Your Skincare & Cosmetic Routines? 🚀</h2>
+      <p style="color: var(--slate-300); margin-bottom: 1.5rem; font-size: 0.95rem;">Join 2 million+ satisfied patrons who shop smart with Stackly Beauty.</p>
+      <div class="cta-btn-group" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="create-account.html" class="btn btn-secondary btn-sm">Create Free Account</a>
+        <a href="products.html" class="btn btn-outline btn-sm" style="border-color: var(--secondary); color: var(--secondary);">Explore Products &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="custom-footer" style="background-color: var(--bg-dark); color: var(--slate-300); padding: var(--spacing-xxl) 0 var(--spacing-lg); border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container">
+      <div class="custom-footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 2fr; gap: var(--spacing-xl);">
+        <!-- Col 1: Brand & About -->
+        <div>
+          <a href="index.html" class="logo" style="display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 800; font-size: 1.4rem; color: #FFFFFF; margin-bottom: 1rem; text-decoration: none;" aria-label="Stackly Home">
+            <img class="logo-img" src="images/stackly-logo.webp" alt="Stackly Logo">
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--slate-400); margin-bottom: 1rem;">India's most trusted premium cosmetics & luxury skincare store. We bring you the best in formulation science with genuine brands, amazing pricing, and expert guidance.</p>
+          
+          <div class="footer-social-boxes" style="display: flex; gap: 0.5rem;">
+            <a href="404.html" class="footer-social-btn" aria-label="Facebook">f</a>
+            <a href="404.html" class="footer-social-btn" aria-label="Twitter">𝕏</a>
+            <a href="404.html" class="footer-social-btn" aria-label="Instagram">📷</a>
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <div class="footer-col-title" style="color: #FFFFFF; font-weight: 700; font-size: 0.95rem; letter-spacing: 1px; margin-bottom: 1.25rem;">QUICK LINKS</div>
+          <ul class="footer-links-list" style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Home</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; About Us</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="products.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Products</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="blog.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Blog</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Categories -->
+        <div>
+          <div class="footer-col-title" style="color: #FFFFFF; font-weight: 700; font-size: 0.95rem; letter-spacing: 1px; margin-bottom: 1.25rem;">CATEGORIES</div>
+          <ul class="footer-links-list" style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;"><a href="404.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Luxury Serums</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="404.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Velvet Lipsticks</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="404.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Hydrating Creams</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="404.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Argan Hair Masks</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="404.html" style="color: var(--slate-400); font-size: 0.9rem;">&gt; Jasmine Perfumes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Us -->
+        <div>
+          <div class="footer-col-title" style="color: #FFFFFF; font-weight: 700; font-size: 0.95rem; letter-spacing: 1px; margin-bottom: 1.25rem;">CONTACT US</div>
+          <div class="footer-contact-row" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--slate-400);">
+            <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: var(--secondary); flex-shrink:0;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>42, Beauty Hub, Koramangala, Bangalore - 560034</span>
+          </div>
+          <div class="footer-contact-row" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--slate-400);">
+            <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: var(--secondary); flex-shrink:0;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>+91 800 123 4567</span>
+          </div>
+          <div class="footer-contact-row" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--slate-400);">
+            <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: var(--secondary); flex-shrink:0;"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>support@stacklybeauty.in</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: var(--spacing-lg); margin-top: var(--spacing-xl); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <p style="font-size: 0.85rem; color: var(--slate-500);">&copy; 2026 Stackly Beauty Pvt. Ltd. All rights reserved.</p>
+        <ul class="footer-bottom-links" style="display: flex; gap: 1.5rem; list-style: none; padding: 0;">
+          <li><a href="404.html" style="font-size: 0.85rem; color: var(--slate-500);">Privacy Policy</a></li>
+          <li><a href="404.html" style="font-size: 0.85rem; color: var(--slate-500);">Terms of Service</a></li>
+          <li><a href="404.html" style="font-size: 0.85rem; color: var(--slate-500);">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="position: fixed; bottom: 30px; right: 30px; width: 44px; height: 44px; border-radius: 50%; background-color: var(--primary); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 999; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+    <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: currentColor;"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages/home.js"></script>
+  <script>
+    // Hydrate Home page properties & agents
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('properties-home-grid');
+      const agentsGrid = document.getElementById('agents-home-grid');
+      const blogsGrid = document.getElementById('blogs-home-grid');
+
+      // Hydrate 3 featured properties
+      if (grid) {
+        grid.innerHTML = '';
+        const featured = PROPERTIES.filter(p => p.featured).slice(0, 3);
+        featured.forEach(p => {
+          let starsHtml = '★'.repeat(p.beds) + '☆'.repeat(5 - p.beds);
+          grid.innerHTML += `
+            <div class="glass-card property-card reveal reveal-up reveal-visible">
+              <div class="property-card-img-wrapper">
+                <img class="property-card-img" src="${p.image}" alt="${p.title}" loading="lazy">
+                <span class="property-badge">Featured</span>
+                <span class="property-card-price">${p.price}</span>
+              </div>
+              <div class="property-card-content">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                  <span class="property-card-tag">${p.type}</span>
+                  <span style="font-size:0.8rem;color:var(--secondary);font-weight:600;">${p.city}</span>
+                </div>
+                <h3 class="property-card-title">${p.title}</h3>
+                <p class="property-card-address">${p.address}</p>
+                <div class="property-card-footer">
+                  <a href="product-details.html?id=${p.id}" class="btn btn-outline-gold btn-sm btn-shimmer">View Details</a>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      // Hydrate experts
+      if (agentsGrid) {
+        agentsGrid.innerHTML = '';
+        AGENTS.slice(0, 3).forEach(a => {
+          agentsGrid.innerHTML += `
+            <div class="glass-card property-card reveal reveal-up reveal-visible" style="padding: 0; text-align: center;">
+              <div style="overflow: hidden; height: 260px; position: relative;">
+                <img src="${a.image}" alt="${a.name}" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                <span style="position: absolute; top: 10px; left: 10px; background: rgba(43,27,23,0.85); color: var(--secondary); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">★ ${a.rating}</span>
+              </div>
+              <div style="padding: 1.5rem;">
+                <h4 style="margin-bottom: 2px;">${a.name}</h4>
+                <p style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem;">${a.designation}</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--slate-200); padding-top: 0.75rem; margin-bottom: 1rem;">
+                  <div>
+                    <span style="font-size: 0.75rem; color: var(--slate-500);">Experience</span>
+                    <h5 style="margin: 0; font-size: 0.95rem;">${a.experience}</h5>
+                  </div>
+                  <div>
+                    <span style="font-size: 0.75rem; color: var(--slate-500);">Consultations</span>
+                    <h5 style="margin: 0; font-size: 0.95rem;">${a.sold}+ Done</h5>
+                  </div>
+                </div>
+                <a href="contact.html" class="btn btn-outline-gold btn-sm" style="width: 100%;">Contact Expert</a>
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      // Hydrate blogs
+      if (blogsGrid) {
+        blogsGrid.innerHTML = '';
+        BLOGS.forEach(b => {
+          blogsGrid.innerHTML += `
+            <div class="glass-card property-card reveal reveal-up reveal-visible">
+              <div style="position: relative; height: 180px; overflow: hidden;">
+                <img src="${b.image}" alt="${b.title}" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; bottom: 10px; left: 10px; background: var(--secondary); color: var(--primary); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;">${b.category}</span>
+              </div>
+              <div style="padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1;">
+                <span style="font-size: 0.8rem; color: var(--slate-400); margin-bottom: 0.5rem;">${b.date} • By ${b.author}</span>
+                <h4 style="font-size: 1.1rem; line-height: 1.4; margin-bottom: 0.5rem; font-weight: 600;">${b.title}</h4>
+                <p style="font-size: 0.85rem; color: var(--slate-600); margin-bottom: 1rem;">${b.summary}</p>
+                <a href="blog.html" class="btn btn-outline-gold btn-sm btn-shimmer" style="margin-top: auto;">Read More</a>
+              </div>
+            </div>
+          `;
+        });
+      }
+    });
+  </script>
+</body>
+</html>
