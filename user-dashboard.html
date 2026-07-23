@@ -161,7 +161,7 @@
 
             <div class="dashboard-panel-card">
               <h3>Exclusive Formulation Recommendations</h3>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+              <div class="dashboard-grid-2-equal" style="gap:1.5rem;">
                 <div class="glass-card" style="padding:10px;">
                   <img src="images/products/perfume_11zon.webp" alt="Perfume" style="width:100%; height:120px; object-fit:cover; border-radius:4px; margin-bottom:5px;">
                   <h5 style="margin:0;">Jasmine Musk Fragrance</h5>
@@ -221,7 +221,7 @@
             <p style="color: var(--slate-500);">Your curated portfolio of bookmarked luxury beauty formulations.</p>
           </div>
         </div>
-        <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+        <div class="grid dashboard-grid-3">
           <div class="dashboard-panel-card">
             <img src="images/products/serum_11zon.webp" alt="Serum" style="width:100%; height:160px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
             <h4>The Hydrated Serum</h4>
@@ -376,8 +376,8 @@
             <p style="color: var(--slate-500);">Keep track of luxury formulations you intend to buy.</p>
           </div>
         </div>
-        <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 1.5rem;" id="dashboard-wishlist-grid">
-          <div class="dashboard-panel-card" style="display:flex; gap:1rem; align-items:center;">
+        <div class="grid" id="dashboard-wishlist-grid">
+          <div class="dashboard-panel-card wishlist-card">
             <img src="images/products/serum_11zon.webp" style="width:140px; height:100px; object-fit:cover; border-radius:6px;">
             <div style="flex-grow:1;">
               <h4>The Hydrated Serum</h4>
@@ -386,7 +386,7 @@
             </div>
           </div>
 
-          <div class="dashboard-panel-card" style="display:flex; gap:1rem; align-items:center;">
+          <div class="dashboard-panel-card wishlist-card">
             <img src="images/products/cream_11zon.webp" style="width:140px; height:100px; object-fit:cover; border-radius:6px;">
             <div style="flex-grow:1;">
               <h4>Moist Gel Cream</h4>
@@ -395,7 +395,7 @@
             </div>
           </div>
 
-          <div class="dashboard-panel-card" style="display:flex; gap:1rem; align-items:center;">
+          <div class="dashboard-panel-card wishlist-card">
             <img src="images/products/lipstick_11zon.webp" style="width:140px; height:100px; object-fit:cover; border-radius:6px;">
             <div style="flex-grow:1;">
               <h4>Velvet Matte Luxe Lipstick</h4>
@@ -404,7 +404,7 @@
             </div>
           </div>
 
-          <div class="dashboard-panel-card" style="display:flex; gap:1rem; align-items:center;">
+          <div class="dashboard-panel-card wishlist-card">
             <img src="images/products/foundation_11zon.webp" style="width:140px; height:100px; object-fit:cover; border-radius:6px;">
             <div style="flex-grow:1;">
               <h4>Perfect Match Soft Focus Foundation</h4>
@@ -423,7 +423,7 @@
             <p style="color: var(--slate-500);">Direct communication channel with your assigned skin coach dermatologist advisors.</p>
           </div>
         </div>
-        <div class="dashboard-panel-card" style="display:grid; grid-template-columns:1fr 2fr; gap:1.5rem; min-height:360px;">
+        <div class="dashboard-panel-card dashboard-profile-grid" style="min-height:360px;">
           <!-- Left Advisor List -->
           <div style="border-right:1px solid var(--slate-100); padding-right:1rem;">
             <h4 style="margin-bottom:1rem;">Conversations</h4>
@@ -502,7 +502,7 @@
             <p style="color: var(--slate-500);">Manage your personal parameters and skin concern history.</p>
           </div>
         </div>
-        <div class="grid" style="grid-template-columns:1fr 2fr; gap:2rem;">
+        <div class="grid dashboard-profile-grid">
           <div class="dashboard-panel-card" style="text-align:center;">
             <img src="images/experts/expert-4.webp" style="width:100px; height:100px; border-radius:50%; object-fit:cover; object-position: center 60%; border:3px solid var(--secondary); margin:0 auto 1rem;">
             <h4>Bhargavi Garipalli</h4>
@@ -513,7 +513,7 @@
           <div class="dashboard-panel-card">
             <h3>Personal Information & Skin Goals</h3>
             <form>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+              <div class="dashboard-grid-2-equal" style="margin-bottom:1rem; gap:1rem;">
                 <div>
                   <label class="form-label">Full Name</label>
                   <input type="text" class="form-control" value="Bhargavi Garipalli">
@@ -523,7 +523,7 @@
                   <input type="email" class="form-control" value="bhargavi@example.com">
                 </div>
               </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+              <div class="dashboard-grid-2-equal" style="margin-bottom:1rem; gap:1rem;">
                 <div>
                   <label class="form-label">Mobile Number</label>
                   <input type="text" class="form-control" value="+91 98765 43210">
@@ -552,7 +552,7 @@
             <p style="color: var(--slate-500);">Configure password controls and alert parameters.</p>
           </div>
         </div>
-        <div class="grid" style="grid-template-columns:1fr 1fr; gap:2rem;">
+        <div class="grid dashboard-grid-2-equal">
           <div class="dashboard-panel-card">
             <h3>Password & Security</h3>
             <form>

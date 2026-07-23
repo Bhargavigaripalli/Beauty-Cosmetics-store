@@ -348,6 +348,29 @@
   .dashboard-grid-2 {
     grid-template-columns: 1fr;
   }
+  .dashboard-profile-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .dashboard-grid-2-equal {
+    grid-template-columns: 1fr;
+  }
+  /* Remove border right from advisor chat list when stacked */
+  #user-tab-messages .dashboard-panel-card > div:first-child {
+    border-right: none !important;
+    border-bottom: 1px solid var(--slate-100);
+    padding-bottom: 1rem;
+    padding-right: 0 !important;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #dashboard-wishlist-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 576px) {
@@ -359,6 +382,18 @@
     align-items: flex-start;
     gap: 1rem;
   }
+  .dashboard-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .wishlist-card {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .wishlist-card img {
+    width: 100% !important;
+    height: 140px !important;
+  }
 }
 
 /* Dashboard Tab Switching Panels */
@@ -368,3 +403,34 @@
 .dashboard-tab-panel.active {
   display: block;
 }
+
+/* Base Dashboard Grid Helper Classes */
+.dashboard-profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin-bottom: var(--spacing-xl);
+}
+.dashboard-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: var(--spacing-xl);
+}
+.dashboard-grid-2-equal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: var(--spacing-xl);
+}
+#dashboard-wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.wishlist-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
