@@ -91,7 +91,7 @@ const PROPERTIES = [
     price: "$39.00",
     priceRaw: 39,
     city: "Fenty Beauty",
-    address: "Best for: Dryness & Dehydration (Dry & Sensitive)",
+    address: "Best for: Dryness & Dehydration",
     beds: 5,
     baths: 312,
     area: 75,
@@ -168,7 +168,7 @@ const PROPERTIES = [
     baths: 154,
     area: 150,
     parking: 1,
-    image: "images/products/serum_11zon.webp", // reuse image or dynamic fallback
+    image: "images/products/cleanser_11zon.webp",
     description: "A gentle exfoliating daily wash that sweeps away impurities while brightening dark spots. Formulated with Kakadu plum extract (rich in Vitamin C) and green tea extracts to protect skin from environmental stress.",
     featured: false,
     amenities: ["Vegan", "Cruelty-Free", "Paraben-Free", "Vitamin C", "Green Tea", "Antioxidant Rich"],
@@ -186,11 +186,29 @@ const PROPERTIES = [
     baths: 88,
     area: 30,
     parking: 1,
-    image: "images/products/cream_11zon.webp", // reuse image
+    image: "images/products/retinol_11zon.webp",
     description: "A clinical-strength nightly serum containing timed-release retinol to visibly minimize wrinkles, fine lines, and uneven tone. Packed with ceramides and niacinamide to nourish the skin barrier and prevent irritation.",
     featured: false,
     amenities: ["Vegan", "Fragrance-Free", "Retinol", "Ceramides", "Niacinamide", "Dermatologist Tested"],
     agentId: 1
+  },
+  {
+    id: 9,
+    title: "Rosewater Botanical Face Toner Mist",
+    type: "Skincare",
+    price: "$26.00",
+    priceRaw: 26,
+    city: "Dior",
+    address: "Best for: Balancing & Soothing (All Skin Types)",
+    beds: 5,
+    baths: 120,
+    area: 120,
+    parking: 1,
+    image: "images/products/toner_11zon.webp",
+    description: "A refreshing organic rosewater mist that instantly hydrates and balances skin's pH. Infused with soothing witch hazel and aloe vera to refine pores, calm redness, and prep skin for serums.",
+    featured: false,
+    amenities: ["Vegan", "Cruelty-Free", "Alcohol-Free", "Rosewater", "Witch Hazel", "Aloe Vera"],
+    agentId: 2
   }
 ];
 
@@ -221,6 +239,15 @@ const BLOGS = [
     summary: "Dull, brittle locks? Learn how organic oils penetrate the hair shaft to lock in hydration, reduce frizz, and restore luxury shine.",
     image: "images/blogs/blog-3 (2)_11zon.webp",
     author: "Sienna Miller"
+  },
+  {
+    id: 4,
+    title: "The Rise of Vegan Cosmetics & Sustainable Sourcing",
+    category: "Eco-Beauty Insights",
+    date: "April 20, 2026",
+    summary: "Why clean, green formulations are dominating the prestige cosmetics market, and how to verify organic eco-certifications on labels.",
+    image: "images/blogs/blog-4_11zon.webp",
+    author: "Aisha Sharma"
   }
 ];
 

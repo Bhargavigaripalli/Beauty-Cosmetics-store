@@ -72,8 +72,7 @@
           <span class="hero-subtitle">Curated Active Formulations & Luxury Aesthetics</span>
           <h1 class="hero-title">Discover Your<br><span>Luminous</span> Skin Health</h1>
           <p class="hero-desc">Explore verified dermatologist-tested cosmetic products, trace-monitored ingredient lists, and book direct consultations with elite beauty advisors.</p>
-          
-          <!-- Search bar panel -->
+           
           <div class="glass-panel search-panel glass-card-dark" id="hero-search-panel">
             <div class="search-tabs">
               <button class="search-tab-btn active">Shop Products</button>
@@ -619,7 +618,7 @@
       // Hydrate blogs
       if (blogsGrid) {
         blogsGrid.innerHTML = '';
-        BLOGS.forEach(b => {
+        BLOGS.slice(0, 3).forEach(b => {
           blogsGrid.innerHTML += `
             <div class="glass-card property-card reveal reveal-up reveal-visible">
               <div style="position: relative; height: 180px; overflow: hidden;">
