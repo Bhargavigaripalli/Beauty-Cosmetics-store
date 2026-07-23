@@ -337,3 +337,15 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .details-specs {
+    grid-template-columns: 1fr;
+  }
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-main-wrapper {
+    height: 220px;
+  }
+}

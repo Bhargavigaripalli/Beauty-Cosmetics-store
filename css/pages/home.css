@@ -10,6 +10,7 @@
   background-color: var(--primary);
   color: var(--white);
   padding-top: 80px;
+  overflow: hidden;
 }
 
 .hero-bg {
@@ -648,8 +649,9 @@
     margin-top: var(--spacing-md);
   }
   .hero-media-wrapper {
-    width: 280px;
-    height: 360px;
+    width: min(280px, 90vw);
+    height: auto;
+    aspect-ratio: 28 / 36;
   }
   .search-fields-grid {
     grid-template-columns: 1fr 1fr;
@@ -699,5 +701,12 @@
   }
   .newsletter-form {
     flex-direction: column;
+  }
+  .search-panel {
+    padding: var(--spacing-sm) !important;
+  }
+  .search-tab-btn {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
   }
 }

@@ -489,8 +489,9 @@ footer {
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
     width: 300px;
+    max-width: 100%;
     height: 100vh;
     background: var(--bg-dark);
     flex-direction: column;
@@ -499,9 +500,10 @@ footer {
     z-index: 1001;
     transition: 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+    transform: translateX(100%);
   }
   .nav-links.active {
-    right: 0;
+    transform: translateX(0);
   }
   .hamburger {
     display: flex;
@@ -564,5 +566,16 @@ footer {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Tiny screen responsive overrides (e.g. width <= 360px) */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  h2, .section-title {
+    font-size: 1.5rem !important;
+  }
+}
+
 
 
